@@ -1,17 +1,310 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport">
-    content="width=device-width, iniditial-scale=1.0"
-    <title>Document</title>
- </head>
- <body>
-   <h1>Meu blog tec</h1> 
-  <p>Vou comprtilhar conhecimentos sobre tecnologia e programação</p>
-<h2>Meu primeiro post</h2>
-<p>Boas-vindas ou meu novo Blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aves do Brasil | Escola de Biodiversidade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-escuro: #051d3b;
+            --azul-medio: #0a2a4a;
+            --azul-claro: #167bf7;
+            --verde: #00c86f;
+            --laranja: #ff8a00;
+            --branco: #ffffff;
+            --cinza-claro: #f5f7fa;
+            --cinza-texto: #6b7c93;
+            --sombra: 0 8px 24px rgba(5, 29, 59, 0.12);
+            --radius: 12px;
+        }
 
-   </body>
- </html>
- 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--cinza-claro);
+            color: var(--azul-escuro);
+            line-height: 1.6;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: var(--branco);
+        }
+
+        .logo span {
+            background: var(--verde);
+            color: var(--azul-escuro);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav a {
+            color: #b8c7d9;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--branco);
+        }
+
+        .btn-header {
+            background: var(--azul-claro);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-header:hover {
+            background: #0d6efd;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, #0a3d6b 100%);
+            color: white;
+            padding: 80px 24px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(22,123,247,0.25) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--verde);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #b8c7d9;
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--verde);
+            color: var(--azul-escuro);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,200,111,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 12px 26px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: white;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .hero-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: var(--verde);
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat:last-child {
+            border-bottom: none;
+        }
+
+        .stat strong {
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        /* ========== SECTIONS ========== */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--cinza-texto);
+            font-size: 1.1rem;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* Cards de espécies */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--sombra);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(5, 29, 59, 0.15);
+        }
+
+        .card-img {
+            height: 180px;
+            background: linear-gradient(135deg, #167bf7, #00c86f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: var(--cinza-texto);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .card a {
+            color: var(--azul-claro);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
