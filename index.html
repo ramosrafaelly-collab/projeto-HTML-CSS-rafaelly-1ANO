@@ -1,24 +1,175 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo dos Cachorros 🐶</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8ef;
+            color: #333;
+        }
+
+        header {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #5c2e0e;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd27f;
+        }
+
+        .principal {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .principal h2 {
+            font-size: 30px;
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+
+        .principal p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .cachorros {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: #8b4513;
+            margin: 15px 0 10px;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #5c2e0e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
-<h1>Meu blog tech</h1>
-<p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+
+    <header>
+        <h1>🐶 Mundo dos Cachorros</h1>
+        <p>Um cantinho especial para quem ama cães!</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#racas">Raças</a>
+        <a href="#cuidados">Cuidados</a>
+    </nav>
+
+    <section class="principal" id="inicio">
+        <h2>Por que os cachorros são tão especiais?</h2>
+        <p>
+            Os cachorros são animais companheiros, inteligentes e muito carinhosos.
+            Eles podem fazer parte da família e trazer muita alegria para o dia a dia.
+            Existem diversas raças, cada uma com características e personalidades diferentes.
+        </p>
+    </section>
+
+    <section class="cachorros" id="racas">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80" alt="Cachorro Golden Retriever">
+            <h3>Golden Retriever</h3>
+            <p>
+                Conhecido por ser amigável, brincalhão e muito carinhoso.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80" alt="Cachorro">
+            <h3>Beagle</h3>
+            <p>
+                Uma raça alegre, curiosa e cheia de energia para brincar.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80" alt="Cachorro Labrador">
+            <h3>Labrador</h3>
+            <p>
+                Inteligente, companheiro e conhecido por seu temperamento amigável.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="principal" id="cuidados">
+        <h2>🐾 Cuidados importantes</h2>
+        <p>
+            Para manter um cachorro saudável e feliz, é importante oferecer
+            alimentação adequada, água limpa, exercícios, higiene, vacinação
+            e visitas regulares ao veterinário.
+        </p>
+    </section>
+
+    <footer>
+        <p>🐾 Feito com ❤️ para os amantes de cachorros</p>
+    </footer>
+
 </body>
 </html>
-<h2>Meu primeiro post</h2>
-<p>Por: Rafaelly</p>
-<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-<style></style>
-header {
-background-color: #183C63;
-color: #FFFFFF;
-}
-text-align: center;
-max-width: 800px;
-margin: 0 auto;
